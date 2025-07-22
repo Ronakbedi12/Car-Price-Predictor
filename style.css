@@ -1,0 +1,141 @@
+/* Reset some defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Background and theme */
+body.bg-dark {
+    background-color: #1c1f26;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #f8f9fa;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 10px;
+}
+
+/* Card styling */
+.card {
+    background-color: #2a2e38;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    border: none;
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    animation: fadeInUp 0.5s ease;
+}
+
+/* Card header */
+.card-header h1 {
+    font-size: 26px;
+    color: #f8f9fa;
+    font-weight: 600;
+}
+
+/* Form elements */
+.form-group label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+select.form-control,
+input.form-control {
+    background-color: #3a3f4b;
+    border: 1px solid #555;
+    color: #fff;
+    border-radius: 6px;
+    padding: 10px;
+    transition: border-color 0.3s ease;
+}
+
+select.form-control:focus,
+input.form-control:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: none;
+}
+
+select.form-control:hover,
+input.form-control:hover {
+    border-color: #007bff;
+    background-color: #444;
+}
+
+/* Predict button */
+button.btn-primary {
+    background-color: #007bff;
+    border: none;
+    padding: 10px 30px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    width: fit-content;
+}
+
+button.btn-primary:hover {
+    background-color: #0056b3;
+    cursor: pointer;
+}
+
+button.btn-primary:active {
+    background-color: #004b99;
+    transform: scale(0.97);
+}
+
+/* Center the button */
+button.center-btn {
+    display: block;
+    margin: 20px auto 0;
+}
+
+/* Result animation */
+#prediction {
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 18px;
+    color: #28a745;
+    font-weight: bold;
+}
+
+#prediction.show {
+    opacity: 1;
+}
+
+/* Spinner style */
+.spinner-border {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-width: 0.2em;
+    vertical-align: middle;
+}
+
+/* Entry animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive tweaks */
+@media (max-width: 576px) {
+    .card-header h1 {
+        font-size: 20px;
+    }
+
+    button.btn-primary {
+        width: 100%;
+    }
+}
